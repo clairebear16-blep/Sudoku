@@ -2,11 +2,14 @@ package com.example.sudoku;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,9 +17,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.launch);
+        setContentView(R.layout.activity_launch);
+        Button button;
+        button = (Button) findViewById(R.id.begin);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                beginGame();
+            }
+        });
 
-        TextView text = findViewById(R.id.Colordoku);
+        /**TextView text = findViewById(R.id.Colordoku);
         String str = "COLORDOKU";
         SpannableString ss = new SpannableString(str);
         ForegroundColorSpan red = new ForegroundColorSpan(Color.RED);
@@ -34,7 +45,12 @@ public class MainActivity extends AppCompatActivity {
         ss.setSpan(red, 6, 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         ss.setSpan(yellow, 7, 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         ss.setSpan(blue, 8, 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-
-        text.setText(ss);
+        if (ss != null) {
+            text.setText(ss);
+        } */
+    }
+    public void beginGame() {
+        Intent intent = new Intent(this, LaunchActivity.class);
+        startActivity(intent);
     }
 }
