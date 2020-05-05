@@ -8,17 +8,13 @@ import android.graphics.Rect;
 
 public class SudokuCell extends BaseSudokuCell {
 
-    private Paint mPaint;
+    private Paint paint;
 
     public SudokuCell(Context context){
         super(context);
 
-        mPaint = new Paint();
+        paint = new Paint();
 
-    }
-    @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 
     @Override
@@ -30,23 +26,23 @@ public class SudokuCell extends BaseSudokuCell {
     }
 
     private void drawNumber(Canvas canvas){
-        mPaint.setColor(Color.BLACK);
-        mPaint.setTextSize(60);
-        mPaint.setStyle(Paint.Style.FILL);
+        paint.setColor(Color.BLACK);
+        paint.setTextSize(60);
+        paint.setStyle(Paint.Style.FILL);
 
         Rect bounds = new Rect();
-        mPaint.getTextBounds(String.valueOf(getValue()), 0, String.valueOf(getValue()).length(), bounds);
+        paint.getTextBounds(String.valueOf(getValue()), 0, String.valueOf(getValue()).length(), bounds);
 
-        if( getValue() != 0 ){
-            canvas.drawText(String.valueOf(getValue()), (getWidth() - bounds.width())/2, (getHeight() + bounds.height())/2	, mPaint);
+        if (getValue() != 0) {
+            canvas.drawText(String.valueOf(getValue()), (getWidth() - bounds.width()) / 2, (getHeight() + bounds.height()) / 2, paint);
         }
     }
 
     private void drawLines(Canvas canvas) {
-        mPaint.setColor(Color.BLACK);
-        mPaint.setStrokeWidth(3);
-        mPaint.setStyle(Paint.Style.STROKE);
+        paint.setColor(Color.BLACK);
+        paint.setStrokeWidth(3);
+        paint.setStyle(Paint.Style.STROKE);
 
-        canvas.drawRect(0, 0, getWidth(), getHeight(), mPaint);
+        canvas.drawRect(0, 0, getWidth(), getHeight(), paint);
     }
 }

@@ -36,6 +36,7 @@ public class SudokuGridView extends GridView {
 
     class GridViewAdapter extends BaseAdapter {
         private Context context;
+
         public GridViewAdapter(Context context) {
             this.context = context;
         }
