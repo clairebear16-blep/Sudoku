@@ -47,20 +47,21 @@ public class GameGenerator {
         }
         return game;
     }
-
-    public int[][] removeElements(int[][] game) {
-        int i = 0;
-        while (i < 3) {
+    public int[][] removeElements(int[][] grid) {
+        int k = 0;
+        //difficulty control
+        while(k < 30) {
             int x = r.nextInt(9);
             int y = r.nextInt(9);
-
-            if (game[x][y] != 0) {
-                game[x][y] = 0;
-                i++;
+            if (grid[x][y] != 0) {
+                //set the number to be 0
+                grid[x][y] = 0;
+                k++;
             }
         }
-        return game;
+        return grid;
     }
+
 
     private void clearGrid (int[][] currentGame) {
         available.clear();

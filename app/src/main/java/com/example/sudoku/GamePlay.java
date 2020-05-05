@@ -1,8 +1,10 @@
 package com.example.sudoku;
 
+import android.content.Context;
+
 public class GamePlay {
     private static GamePlay instance;
-    private int[][] game;
+    private GameGrid grid = null;
     private GamePlay() {}
     public static GamePlay getInstance() {
         if (instance == null) {
@@ -11,10 +13,13 @@ public class GamePlay {
         return instance;
     }
 
-    public int[][] getGame() {
-        return game;
+    public void createGrid(Context context) {
+        int [][] game = GameGenerator.getExample().generateGrid();
+        game = GameGenerator.getExample().removeElements(game);
     }
-    public void setGame(int[][] setGame) {
-        game = setGame;
+
+    public GameGrid getGrid() {
+        return grid;
     }
+
 }
