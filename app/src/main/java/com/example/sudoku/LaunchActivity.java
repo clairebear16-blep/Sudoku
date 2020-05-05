@@ -107,6 +107,8 @@ public class LaunchActivity extends AppCompatActivity {
         GamePlay.getInstance().setGame(game);
 
         printGrid(game);
+
+        GameEngine.getInstance().createGrid(this);
     }
 
     private void printGrid(int grid[][]) {
@@ -117,4 +119,6 @@ public class LaunchActivity extends AppCompatActivity {
             System.out.println();
         }
     }
+
+
 }

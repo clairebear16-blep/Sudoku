@@ -4,8 +4,6 @@ import android.content.Context;
 import android.view.View;
 
 public class BaseSudokuCell extends View {
-
-
     private int value;
     private boolean modifiable = true;
 
@@ -22,13 +20,13 @@ public class BaseSudokuCell extends View {
         modifiable = false;
     }
 
-    public void setInitValue(int value){
+    public void setInitValue(int value) {
         this.value = value;
         invalidate();
     }
 
-    public void setValue( int value ){
-        if( modifiable ){
+    public void setValue(int value) {
+        if (modifiable) {
             this.value = value;
         }
 

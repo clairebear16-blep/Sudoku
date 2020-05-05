@@ -18,8 +18,11 @@ public class GameGenerator {
     public int[][] generateGrid() {
         int[][] game = new int[9][9];
         int currentPosition = 0;
-        clearGrid(game);
+        //clearGrid(game);
         while (currentPosition < 81) {
+            if (currentPosition == 0) {
+                clearGrid(game);
+            }
             if (available.get(currentPosition).size() != 0) {
                 int i = r.nextInt(available.get(currentPosition).size());
                 int number = available.get(currentPosition).get(i);
@@ -45,7 +48,22 @@ public class GameGenerator {
         return game;
     }
 
+    public int[][] removeElements(int[][] game) {
+        int i = 0;
+        while (i < 3) {
+            int x = r.nextInt(9);
+            int y = r.nextInt(9);
+
+            if (game[x][y] != 0) {
+                game[x][y] = 0;
+                i++;
+            }
+        }
+        return game;
+    }
+
     private void clearGrid (int[][] currentGame) {
+        available.clear();
         for (int y = 0; y < 9; y++) {
             for (int x = 0; x < 9; x++) {
                 currentGame[x][y] = -1;
