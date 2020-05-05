@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         TextView textView = findViewById(R.id.Colordoku);
-        String title = "COLORDOKU";
+        String title = "COLORMIX";
         textView.setText(buildRainbowText(title));
 
     }

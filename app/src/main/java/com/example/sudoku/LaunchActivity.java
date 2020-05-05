@@ -103,14 +103,8 @@ public class LaunchActivity extends AppCompatActivity {
             }
         });
 
-        int [][] game = GameGenerator.getExample().generateGrid();
-        GamePlay.getInstance().setGame(game);
-
-        printGrid(game);
-
-        GameEngine.getInstance().createGrid(this);
     }
-
+    /*
     private void printGrid(int grid[][]) {
         for (int y = 0; y < 9; y++) {
             for(int x = 0; x < 9; x++) {
@@ -119,6 +113,8 @@ public class LaunchActivity extends AppCompatActivity {
             System.out.println();
         }
     }
+
+     */
 
 
 }

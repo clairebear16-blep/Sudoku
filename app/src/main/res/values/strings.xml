@@ -11,5 +11,11 @@
     <string name="_9">9</string>
     <string name="begin">Begin!</string>
     <string name="colordoku">COLORDOKU</string>
+    <string name="up">Up</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="down">Down</string>
+    <string name="colormix">COLORMIX</string>
+    <string name="mix" >MIX!!!!</string>
     />
 </resources>

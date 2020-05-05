@@ -16,7 +16,7 @@
         android:layout_marginEnd="101dp"
         android:layout_marginRight="101dp"
         android:layout_marginBottom="184dp"
-        android:text="@string/colordoku"
+        android:text="@string/colormix"
         android:textColor="#9C27B0"
         android:textColorLink="@color/colorPrimary"
         android:textSize="36sp"
