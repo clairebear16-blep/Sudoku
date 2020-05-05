@@ -12,8 +12,8 @@ import android.widget.TextView;
 
 public class LaunchActivity extends AppCompatActivity {
     View view;
-    int currentColor = R.color.white;
-    private static int resultColor;
+    int currentColor;
+    int resultColor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,15 +34,16 @@ public class LaunchActivity extends AppCompatActivity {
         Button pinkButton = (Button) findViewById(R.id.purpleButton);
         Button purpleButton = (Button) findViewById(R.id.pinkButton);
         Button clearButton = (Button) findViewById(R.id.clear);
+        currentColor = getResources().getColor(R.color.white);
         redButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (currentColor == R.color.white) {
+                if (currentColor == getResources().getColor(R.color.white)) {
                     view.setBackgroundResource(R.color.red);
-                    int resultColor = R.color.red;
+                    resultColor = getResources().getColor(R.color.red);
                     currentColor = resultColor;
                 }
-                int resultColor = ColorUtils.blendARGB(getResources().getColor(currentColor),
+                resultColor = ColorUtils.blendARGB(currentColor,
                         getResources().getColor(R.color.red), 0.5F);
                 view.setBackgroundColor(resultColor);
                 currentColor = resultColor;
@@ -53,7 +54,12 @@ public class LaunchActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //this part of code is subject to change
-                int resultColor = ColorUtils.blendARGB(getResources().getColor(currentColor),
+                if (currentColor == getResources().getColor(R.color.white)) {
+                    view.setBackgroundResource(R.color.orange);
+                    resultColor = getResources().getColor(R.color.orange);
+                    currentColor = resultColor;
+                }
+                resultColor = ColorUtils.blendARGB(currentColor,
                         getResources().getColor(R.color.orange), 0.5F);
                 view.setBackgroundColor(resultColor);
                 currentColor = resultColor;
@@ -63,7 +69,12 @@ public class LaunchActivity extends AppCompatActivity {
         yellowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int resultColor = ColorUtils.blendARGB(getResources().getColor(currentColor),
+                if (currentColor == getResources().getColor(R.color.white)) {
+                    view.setBackgroundResource(R.color.yellow);
+                    resultColor = getResources().getColor(R.color.yellow);
+                    currentColor = resultColor;
+                }
+                resultColor = ColorUtils.blendARGB(currentColor,
                         getResources().getColor(R.color.yellow), 0.5F);
                 view.setBackgroundColor(resultColor);
                 currentColor = resultColor;
@@ -73,7 +84,12 @@ public class LaunchActivity extends AppCompatActivity {
         limeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int resultColor = ColorUtils.blendARGB(getResources().getColor(currentColor),
+                if (currentColor == getResources().getColor(R.color.white)) {
+                    view.setBackgroundResource(R.color.lime);
+                    resultColor = getResources().getColor(R.color.lime);
+                    currentColor = resultColor;
+                }
+                resultColor = ColorUtils.blendARGB(currentColor,
                         getResources().getColor(R.color.lime), 0.5F);
                 view.setBackgroundColor(resultColor);
                 currentColor = resultColor;
@@ -83,7 +99,12 @@ public class LaunchActivity extends AppCompatActivity {
         greenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int resultColor = ColorUtils.blendARGB(getResources().getColor(currentColor),
+                if (currentColor == getResources().getColor(R.color.white)) {
+                    view.setBackgroundResource(R.color.green);
+                    resultColor = getResources().getColor(R.color.green);
+                    currentColor = resultColor;
+                }
+                resultColor = ColorUtils.blendARGB(currentColor,
                         getResources().getColor(R.color.green), 0.5F);
                 view.setBackgroundColor(resultColor);
                 currentColor = resultColor;
@@ -93,7 +114,12 @@ public class LaunchActivity extends AppCompatActivity {
         lightblueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int resultColor = ColorUtils.blendARGB(getResources().getColor(currentColor),
+                if (currentColor == getResources().getColor(R.color.white)) {
+                    view.setBackgroundResource(R.color.lightblue);
+                    resultColor = getResources().getColor(R.color.lightblue);
+                    currentColor = resultColor;
+                }
+                resultColor = ColorUtils.blendARGB(currentColor,
                         getResources().getColor(R.color.lightblue), 0.5F);
                 view.setBackgroundColor(resultColor);
                 currentColor = resultColor;
@@ -103,7 +129,12 @@ public class LaunchActivity extends AppCompatActivity {
         blueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int resultColor = ColorUtils.blendARGB(getResources().getColor(currentColor),
+                if (currentColor == getResources().getColor(R.color.white)) {
+                    view.setBackgroundResource(R.color.blue);
+                    resultColor = getResources().getColor(R.color.blue);
+                    currentColor = resultColor;
+                }
+                resultColor = ColorUtils.blendARGB(currentColor,
                         getResources().getColor(R.color.blue), 0.5F);
                 view.setBackgroundColor(resultColor);
                 currentColor = resultColor;
@@ -113,7 +144,12 @@ public class LaunchActivity extends AppCompatActivity {
         pinkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int resultColor = ColorUtils.blendARGB(getResources().getColor(currentColor),
+                if (currentColor == getResources().getColor(R.color.white)) {
+                    view.setBackgroundResource(R.color.pink);
+                    resultColor = getResources().getColor(R.color.pink);
+                    currentColor = resultColor;
+                }
+                resultColor = ColorUtils.blendARGB(currentColor,
                         getResources().getColor(R.color.pink), 0.5F);
                 view.setBackgroundColor(resultColor);
                 currentColor = resultColor;
@@ -123,7 +159,12 @@ public class LaunchActivity extends AppCompatActivity {
         purpleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int resultColor = ColorUtils.blendARGB(getResources().getColor(currentColor),
+                if (currentColor == getResources().getColor(R.color.white)) {
+                    view.setBackgroundResource(R.color.purple);
+                    resultColor = getResources().getColor(R.color.purple);
+                    currentColor = resultColor;
+                }
+                resultColor = ColorUtils.blendARGB(currentColor,
                         getResources().getColor(R.color.purple), 0.5F);
                 view.setBackgroundColor(resultColor);
                 currentColor = resultColor;
