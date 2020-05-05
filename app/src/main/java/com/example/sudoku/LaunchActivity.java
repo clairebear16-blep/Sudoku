@@ -171,13 +171,13 @@ public class LaunchActivity extends AppCompatActivity {
             }
         });
 
-        /**clearButton.setOnClickListener(new View.OnClickListener() {
+        clearButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //this part of code is subject to change
                 view.setBackgroundResource(R.color.white);
             }
-        });*/
+        });
 
     }
     /*
