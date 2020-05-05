@@ -101,5 +101,16 @@ public class LaunchActivity extends AppCompatActivity {
                 view.setBackgroundResource(R.color.purple);
             }
         });
+        int [][] game = GameGenerator.getExample().generateGrid();
+        printGrid(game);
+    }
+
+    private void printGrid(int grid[][]) {
+        for (int y = 0; y < 9; y++) {
+            for(int x = 0; x < 9; x++) {
+                System.out.print(grid[x][y] + "1");
+            }
+            System.out.println();
+        }
     }
 }
