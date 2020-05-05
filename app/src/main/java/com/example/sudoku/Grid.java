@@ -19,7 +19,7 @@ public class Grid {
     public void setGrid(int[][] grid) {
         for (int x = 0; x < 9; x++) {
             for (int y = 0; y < 9; y++) {
-                cell[x][y].setValue(grid[x][y]);
+                cell[x][y].setInitValue(grid[x][y]);
                 if ((grid[x][y]) != 0) {
                     cell[x][y].setNotModifiable();
                 }

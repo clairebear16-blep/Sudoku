@@ -97,11 +97,163 @@
             android:text="@string/_9" />
     </GridLayout>
 
-    <com.example.sudoku.SudokuGridView
-        android:layout_width="match_parent"
+    <TableLayout
+        android:id="@+id/background"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:numColumns="9"
-        android:horizontalSpacing="0dp"
-        android:verticalSpacing="0dp"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TableRow
+            android:id="@+id/Row0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="1.5dp"
+            android:paddingStart="1.5dp">
+
+            <fragment
+                android:id="@+id/Box0"
+                android:name="com.example.sudoku.Block"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                tools:layout="@layout/fragment_sudoku_block" />
+
+            <fragment
+                android:id="@+id/Box1"
+                android:name="com.example.sudoku.Block"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                tools:layout="@layout/fragment_sudoku_block" />
+
+            <fragment
+                android:id="@+id/Box2"
+                android:name="com.example.sudoku.Block"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                tools:layout="@layout/fragment_sudoku_block" />
+
+            <fragment
+                android:id="@+id/box3"
+                android:name="com.example.sudoku.Block"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                tools:layout="@layout/fragment_sudoku_block" />
+
+            <fragment
+                android:id="@+id/box4"
+                android:name="com.example.sudoku.Block"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                tools:layout="@layout/fragment_sudoku_block" />
+
+            <fragment
+                android:id="@+id/box5"
+                android:name="com.example.sudoku.Block"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                tools:layout="@layout/fragment_sudoku_block" />
+
+            <fragment
+                android:id="@+id/box6"
+                android:name="com.example.sudoku.Block"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                tools:layout="@layout/fragment_sudoku_block" />
+
+            <fragment
+                android:id="@+id/box7"
+                android:name="com.example.sudoku.Block"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                tools:layout="@layout/fragment_sudoku_block" />
+
+            <fragment
+                android:id="@+id/box8"
+                android:name="com.example.sudoku.Block"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                tools:layout="@layout/fragment_sudoku_block" />
+
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/Row0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="1.5dp"
+            android:paddingStart="1.5dp">
+
+            <fragment
+                android:id="@+id/Box0"
+                android:name="com.example.sudoku.Block"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                tools:layout="@layout/fragment_sudoku_block" />
+
+            <fragment
+                android:id="@+id/Box1"
+                android:name="com.example.sudoku.Block"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                tools:layout="@layout/fragment_sudoku_block" />
+
+            <fragment
+                android:id="@+id/Box2"
+                android:name="com.example.sudoku.Block"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                tools:layout="@layout/fragment_sudoku_block" />
+
+            <fragment
+                android:id="@+id/box3"
+                android:name="com.example.sudoku.Block"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                tools:layout="@layout/fragment_sudoku_block" />
+
+            <fragment
+                android:id="@+id/box4"
+                android:name="com.example.sudoku.Block"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                tools:layout="@layout/fragment_sudoku_block" />
+
+            <fragment
+                android:id="@+id/box5"
+                android:name="com.example.sudoku.Block"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                tools:layout="@layout/fragment_sudoku_block" />
+
+            <fragment
+                android:id="@+id/box6"
+                android:name="com.example.sudoku.Block"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                tools:layout="@layout/fragment_sudoku_block" />
+
+            <fragment
+                android:id="@+id/box7"
+                android:name="com.example.sudoku.Block"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                tools:layout="@layout/fragment_sudoku_block" />
+
+            <fragment
+                android:id="@+id/box8"
+                android:name="com.example.sudoku.Block"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                tools:layout="@layout/fragment_sudoku_block" />
+
+
+        </TableRow>
+
+    </TableLayout>
 
 </RelativeLayout>
