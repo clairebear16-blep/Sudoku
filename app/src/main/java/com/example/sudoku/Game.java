@@ -1,5 +1,6 @@
 package com.example.sudoku;
 
+import java.io.Serializable;
 import java.util.Random;
 
 public class Game implements Serializable {
@@ -10,16 +11,16 @@ public class Game implements Serializable {
     public int difficulty;
 
     /** The life number a player has. */
-    public int life = Constants.LIFE_NUM;
+    public int life = Constant.LIFE_NUM;
 
     /** This is the answer to the puzzle. */
-    public Grid answerGrid;
+    public GameGrid answerGrid;
 
     /** The initial state of the game, will change as the user plays. */
-    public Grid puzzleGrid;
+    public GameGrid puzzleGrid;
 
     /** The initial state of the game, will remain unchanged. */
-    public Grid initialGrid;
+    public GameGrid initialGrid;
 
     /** pointer that stored [int row, int col] pair. */
     public int[] pointer = new int[2];
@@ -85,7 +86,7 @@ public class Game implements Serializable {
             // Store the generated Sudoku grid as a 2-D array of char
             char[][] charGrid = new RandomGen(4, Constant.TOKENS).getPaper();
             // Turn that 2-D char array into a new grid
-            this.answerGrid = new Grid(charGridToIntGrid(charGrid));
+            this.answerGrid = new GameGrid(charGridToIntGrid(charGrid));
             // Initialize the puzzle grid
             this.puzzleGrid = this.answerGrid.clone();
             // @DEBUG
@@ -156,8 +157,8 @@ public class Game implements Serializable {
         Random random = new Random();
         // Keep removing blocks
         while (true) {
-            int row = random.nextInt(Grid.DIMENSION);
-            int column = random.nextInt(Grid.DIMENSION);
+            int row = random.nextInt(GameGrid.DIMENSION);
+            int column = random.nextInt(GameGrid.DIMENSION);
             // If this is not an empty cell
             if (this.puzzleGrid.cells[row][column].value != -1) {
                 // Store the value in case things don't work out well.

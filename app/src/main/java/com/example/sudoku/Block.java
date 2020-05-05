@@ -100,4 +100,3 @@ public class Block extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 }
-}
