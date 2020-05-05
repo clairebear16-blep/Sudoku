@@ -30,6 +30,7 @@ public class GameGenerator {
                     int yPos = currentPosition / 9;
                     game[xPos][yPos] = number;
                     available.get(currentPosition).remove(i);
+                    currentPosition++;
                 } else {
                     available.get(currentPosition).remove(i);
                 }
@@ -38,7 +39,7 @@ public class GameGenerator {
                 for (int i = 1; i <= 9; i++) {
                     available.get(currentPosition).add(i);
                 }
-                currentPosition++;
+                currentPosition--;
             }
         }
         return game;

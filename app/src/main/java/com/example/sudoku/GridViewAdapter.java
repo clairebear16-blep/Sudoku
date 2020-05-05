@@ -37,6 +37,11 @@ public class GridViewAdapter extends BaseAdapter {
             v = inflator.inflate(R.layout.cell, parent, false);
         }
 
+        int x = position % 9;
+        int y = position / 9;
+
+        SudokuCell cell = (SudokuCell) v;
+        //cell.setNumber(GameGenerator)
         return v;
     }
 }

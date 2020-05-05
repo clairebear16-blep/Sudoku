@@ -10,11 +10,15 @@ public class SudokuCell extends BaseSudokuCell {
 
     private Paint mPaint;
 
-    public SudokuCell(Context context ){
+    public SudokuCell(Context context){
         super(context);
 
         mPaint = new Paint();
 
+    }
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 
     @Override

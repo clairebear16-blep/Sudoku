@@ -16,6 +16,7 @@ public class LaunchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         /**TextView textView = findViewById(R.id.Colordoku);
         String str = "COLORDUKU";
         SpannableString ss = new SpannableString(str); */
@@ -101,7 +102,10 @@ public class LaunchActivity extends AppCompatActivity {
                 view.setBackgroundResource(R.color.purple);
             }
         });
+
         int [][] game = GameGenerator.getExample().generateGrid();
+        GamePlay.getInstance().setGame(game);
+
         printGrid(game);
     }
 

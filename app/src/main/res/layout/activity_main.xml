@@ -97,31 +97,11 @@
             android:text="@string/_9" />
     </GridLayout>
 
-    <TableLayout
-        android:id="@+id/grid"
+    <com.example.sudoku.SudokuGridView
         android:layout_width="match_parent"
-        android:layout_height="386dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="-4dp"
-        android:layout_marginTop="132dp"
-        android:visibility="visible">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </TableLayout>
+        android:layout_height="wrap_content"
+        android:numColumns="9"
+        android:horizontalSpacing="0dp"
+        android:verticalSpacing="0dp"/>
 
 </RelativeLayout>
